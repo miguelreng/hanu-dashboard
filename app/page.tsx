@@ -13,26 +13,7 @@ export default function Home() {
     <div className="h-screen overflow-hidden bg-black text-white flex flex-col">
       {/* Header */}
       <header className="p-4">
-        <h1 className="text-2xl tracking-tighter font-bold text-gray-500 text-spacing-px">HANU SQUAD COMMAND</h1>
-        <p className="mt-1 text-[10px] leading-none text-gray-500">
-          <a
-            href="https://github.com/gkamradt/agenttrafficcontrol"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-400 italic underline"
-          >
-            OPEN SOURCE
-          </a>
-          <span className="px-1">•</span>
-          <a
-            href="https://x.com/gregkamradt"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-400 italic underline"
-          >
-            BY GREG
-          </a>
-        </p>
+        <img src="/logo.jpg" alt="Hanu Squad Command" className="h-12 w-auto invert opacity-80" />
       </header>
 
       {/* Controls row */}
@@ -48,18 +29,18 @@ export default function Home() {
             <div className="min-h-0 overflow-hidden flex flex-col">
 
               <div className="flex items-center bg-[#130f04ff]">
-                <h2 className="bg-[#c79325] pl-2 pr-2 font-bold text-black">MONITORING TABLE</h2>
+                <h2 className="bg-[#c79325] pl-2 pr-2 font-bold text-black">SQUAD MONITORING</h2>
               </div>
 
               <div className="grid grid-cols-[20%_1fr] gap-0 border border-[#352b19ff]" style={{ minHeight: 'auto' }}>
                 {/* Column 1: 2 parts wide */}
                 <div className="border-r border-[#352b19ff] p-3">
-                  <div className="text-xs text-[#d79326ff] mb-1">Project ID</div>
+                  <div className="text-xs text-[#d79326ff] mb-1">Mission ID</div>
                   <div className="text-sm text-[#a4a4a4ff]"><ProjectIdDisplay /></div>
                 </div>
                 {/* Column 2: 1 part wide */}
                 <div className="p-3">
-                  <div className="text-xs text-[#c89225ff] mb-1">Project Description</div>
+                  <div className="text-xs text-[#c89225ff] mb-1">Mission Objective</div>
                   <div className="text-sm text-[#a4a4a4ff]"><ProjectDescription /></div>
                 </div>
               </div>
@@ -68,7 +49,7 @@ export default function Home() {
             {/* Operator Action Items (middle) */}
             <div className="min-h-0 overflow-hidden border border-[#352b19ff] bg-black border-b-0 flex flex-col">
               <div className="flex items-center border-b-3 border-[#352b19ff]">
-                <h2 className="text-lg text-[#d79326ff] pl-2 pr-2">OPERATOR ACTION ITEMS</h2>
+                <h2 className="text-lg text-[#d79326ff] pl-2 pr-2">SQUAD TASKS</h2>
               </div>
               <div className="flex-1 min-h-0 overflow-auto">
                 <OperatorGroups />

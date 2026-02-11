@@ -55,7 +55,7 @@ export default function ControlBar() {
 
   return (
     <div className="px-2 py-2 flex flex-wrap gap-2 items-center">
-      <label className="text-sm text-gray-300">Project</label>
+      <label className="text-sm text-gray-300">Hub Mission</label>
       <select
         value={plan}
         onChange={(e) => setPlan(e.target.value)}
