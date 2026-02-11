@@ -13,7 +13,7 @@ export default function Home() {
     <div className="h-screen overflow-hidden bg-black text-white flex flex-col">
       {/* Header */}
       <header className="p-4">
-        <h1 className="text-2xl tracking-tighter font-bold text-gray-500 text-spacing-px">AGENT TRAFFIC CONTROL</h1>
+        <h1 className="text-2xl tracking-tighter font-bold text-gray-500 text-spacing-px">HANU SQUAD COMMAND</h1>
         <p className="mt-1 text-[10px] leading-none text-gray-500">
           <a
             href="https://github.com/gkamradt/agenttrafficcontrol"

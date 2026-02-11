@@ -85,7 +85,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined' && (!window.crypto || !window.crypto.randomUUID)) {
+                window.crypto = window.crypto || {};
+                window.crypto.randomUUID = function() {
+                  return ([1e7]+-1e3+-4e3+-8e3+-11e7).replace(/[018]/g, c =>
+                    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+                  );
+                };
+                if (!window.crypto.getRandomValues) {
+                  window.crypto.getRandomValues = function(array) {
+                    for (let i = 0; i < array.length; i++) {
+                      array[i] = Math.floor(Math.random() * 256);
+                    }
+                    return array;
+                  };
+                }
+              }
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${sourceCodePro.variable} ${jetBrainsMono.variable} antialiased font-sans`}
       >
